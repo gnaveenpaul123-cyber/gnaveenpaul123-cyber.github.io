@@ -84,10 +84,10 @@
 			};
 
 			// Disable parallax on ..
-				if (browser.name == 'ie'			// IE
-				||	browser.name == 'edge'			// Edge
-				||	window.devicePixelRatio > 1		// Retina/HiDPI (= poor performance)
-				||	browser.mobile)					// Mobile devices
+				if (browser.name == 'ie'            // IE
+				||    browser.name == 'edge'            // Edge
+				||    window.devicePixelRatio > 1        // Retina/HiDPI (= poor performance)
+				||    browser.mobile)                    // Mobile devices
 					off();
 
 			// Enable everywhere else.
@@ -115,6 +115,27 @@
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
+
+			// Welcome overlay: show only once per browser (localStorage) and hide after 1s
+			try {
+				var overlay = document.getElementById('welcome-overlay');
+				if (overlay) {
+					if (localStorage && localStorage.getItem('welcomeShown')) {
+						// User already saw the welcome: remove immediately
+						overlay.parentNode.removeChild(overlay);
+					} else {
+						// First time: mark as shown and hide after 1s
+						if (localStorage) localStorage.setItem('welcomeShown', '1');
+						setTimeout(function() {
+							overlay.classList.add('hidden');
+							overlay.setAttribute('aria-hidden', 'true');
+							setTimeout(function() {
+								if (overlay && overlay.parentNode) overlay.parentNode.removeChild(overlay);
+							}, 150);
+						}, 100);
+					}
+				}
+			} catch (e) { /* ignore storage errors */ }
 		});
 
 	// Scrolly.
@@ -192,7 +213,7 @@
 
 			// Hack: Disable transitions on WP.
 				if (browser.os == 'wp'
-				&&	browser.osVersion < 10)
+				&&    browser.osVersion < 10)
 					$navPanel
 						.css('transition', 'none');
 
