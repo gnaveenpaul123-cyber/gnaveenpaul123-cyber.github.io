@@ -74,69 +74,73 @@
 		}
 
 		> .posts {
-			@include fixed-grid((
-				columns:			2,
-				gutters:			(_size(padding) * 4),
-				horizontal-align:	center,
-				vertical-align:		flex-start,
-				flush:				false
-			));
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-flex-direction: column;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-moz-align-items: stretch;
+			-webkit-align-items: stretch;
+			-ms-align-items: stretch;
+			align-items: stretch;
+			text-align: center;
 			width: 100%;
 			padding: 0;
 
+			> * {
+				width: 100%;
+				max-width: 100%;
+				box-sizing: border-box;
+				padding: (_size(padding) * 4);
+				-moz-flex-shrink: 0;
+				-webkit-flex-shrink: 0;
+				-ms-flex-shrink: 0;
+				flex-shrink: 0;
+				-moz-flex-grow: 1;
+				-webkit-flex-grow: 1;
+				-ms-flex-grow: 1;
+				flex-grow: 1;
+			}
+
 			> article {
 				border-color: _palette(border);
-				border-left-width: 2px;
 				border-style: solid;
-				border-top-width: 2px;
+				border-width: 2px 0 0 0;
 				text-align: center;
+				width: 100%;
+
+				&:first-child {
+					border-top-width: 0;
+				}
 
 				> :last-child {
 					margin-bottom: 0;
 				}
 
-				&:nth-child(2n - 1) {
-					border-left-width: 0;
-				}
-
-				&:nth-child(-n + 2) {
-					border-top-width: 0;
+				.image {
+					max-width: 32rem;
+					margin-left: auto;
+					margin-right: auto;
 				}
 			}
 
 			@include breakpoint('<=medium') {
-				@include fixed-grid-resize((
-					columns:			2,
-					gutters:			(_size(padding) * 2.5),
-					flush:				false
-				));
+				> * {
+					width: 100%;
+					padding: (_size(padding) * 2.5);
+				}
 			}
 
 			@include breakpoint('<=small') {
-				@include fixed-grid-resize((
-					columns:			1,
-					gutters:			(_size(padding) * 2),
-					prev-columns:		2,
-					flush:				false
-				));
+				> * {
+					width: 100%;
+					padding: (_size(padding) * 2);
+				}
 
 				> article {
-					&:nth-child(2n - 1) {
-						border-left-width: 2px;
-					}
-
-					&:nth-child(-n + 2) {
-						border-top-width: 2px;
-					}
-
-					&:nth-child(n) {
-						border-left-width: 0;
-					}
-
-					&:nth-child(-n + 1) {
-						border-top-width: 0;
-					}
-
 					.image {
 						max-width: 25rem;
 						margin-left: auto;
