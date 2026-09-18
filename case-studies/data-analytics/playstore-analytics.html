@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Google Play Store Analytics Dashboard — Tableau Case Study | Naveen Paul Reddy</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../../assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="../../assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="../../index.html" class="logo">PORTFOLIO</a>
+		</header>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li><a href="../../index.html">HOME</a></li>
+				<li class="active"><a href="../../data-analytics.html">DATA ANALYTICS</a></li>
+				<li><a href="../../fintech-fraud.html">FINTECH &amp; FRAUD</a></li>
+				<li><a href="../../index.html#about">ABOUT</a></li>
+				<li><a href="../../index.html#resume">RESUME</a></li>
+				<li><a href="#contact" class="scrolly">CONTACT</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="https://github.com/gnaveenpaul123-cyber" class="icon brands fa-github" target="_blank"
+						rel="noopener noreferrer"><span class="label">GitHub</span></a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+
+			<article class="post case-study-container">
+
+				<!-- Back to Data Analytics -->
+				<div class="case-study-back-bar">
+					<a href="../../data-analytics.html" class="case-study-back-link">&larr; Back to Data Analytics</a>
+					<a href="../../data-analytics.html#bi" class="case-study-back-link">BI &amp; Tableau Track &rarr;</a>
+				</div>
+
+				<!-- Hero Section -->
+				<header class="case-study-hero">
+					<span class="case-study-eyebrow">TABLEAU &bull; DATA VISUALIZATION &bull; EXPLORATORY ANALYSIS</span>
+					<h1>Google Play Store Analytics Dashboard</h1>
+					<p class="case-study-lead">An interactive Tableau dashboard that brings together Google Play Store app data in one exploration workspace. It enables users to compare app categories, install levels, ratings, pricing type, content ratings, and app-update trends through interactive filters, headline KPI indicators, and coordinated visual views.</p>
+
+					<ul class="case-study-tech-tags" aria-label="Technologies">
+						<li class="skill-tag">Tableau</li>
+						<li class="skill-tag">Tableau Public</li>
+						<li class="skill-tag">Data Visualization</li>
+						<li class="skill-tag">Exploratory Data Analysis</li>
+						<li class="skill-tag">Dashboard Design</li>
+						<li class="skill-tag">Calculated Fields</li>
+					</ul>
+
+					<div class="case-study-actions">
+						<a href="#dashboard" class="button primary small">View Dashboard Preview</a>
+					</div>
+				</header>
+
+				<!-- Section: Overview -->
+				<section id="overview" class="case-study-section">
+					<h2>Overview</h2>
+					<p>The Google Play Store Analytics Dashboard is a comprehensive Tableau Public exploration workspace engineered to analyze the dynamics of the mobile application marketplace. By consolidating multidimensional app records into an interconnected dashboard layout, the project transforms dense tabular datasets into clear visual summaries. The dashboard provides stakeholders with immediate visibility into catalogue distributions, revenue drivers, market tiers, and release timelines across tens of thousands of application listings.</p>
+				</section>
+
+				<!-- Section: Problem & Objective -->
+				<section id="problem" class="case-study-section">
+					<h2>Problem &amp; Objective</h2>
+					<p>App-store datasets contain many overlapping dimensions: category, installs, rating, pricing model, content rating, reviews, and last-updated date. Looking at rows of data alone makes it difficult to identify how the marketplace is distributed, isolate growth segments, or compare categories under specific operating conditions.</p>
+					<p>The core objective was to design a unified Tableau dashboard that allows users to:</p>
+					<ul>
+						<li>Filter the entire app catalogue dynamically by category, install bracket, pricing type, and content rating.</li>
+						<li>Monitor high-level summary KPIs for total installs, catalogue app count, free-versus-paid market mix, and average rating.</li>
+						<li>Identify high-volume categories leading the catalogue by total app counts.</li>
+						<li>Evaluate market monetization by exploring the distribution of free versus paid applications.</li>
+						<li>Examine app lifecycle and release momentum through trends by year of last update.</li>
+						<li>Compare category ratings, examine catalogue concentration across install brackets, and evaluate the relationship between user ratings and total installs.</li>
+					</ul>
+				</section>
+
+				<!-- Section: What I Built in Tableau -->
+				<section id="features" class="case-study-section">
+					<h2>What I Built in Tableau</h2>
+					<ul>
+						<li><strong>Interactive Dashboard Filters:</strong> Global category, install bracket, pricing type (Free / Paid), and content rating dropdown filters that dynamically update all connected dashboard views.</li>
+						<li><strong>Headline KPI Indicators:</strong> Clean executive indicator cards displaying total installs, total app volume, free app percentage share, and overall average rating across the active filter selection.</li>
+						<li><strong>Category Volume Comparison:</strong> A horizontal bar chart displaying the Top 10 categories by total number of apps to highlight marketplace concentration.</li>
+						<li><strong>Revenue &amp; Monetization Ranking:</strong> A vertical bar chart ranking Top 10 categories by estimated revenue to identify key financial drivers.</li>
+						<li><strong>Pricing Model Distribution:</strong> A Free vs Paid donut chart visualizing the proportion and app-count split between free and paid software models.</li>
+						<li><strong>Release Momentum &amp; Update Trends:</strong> A dual time-series line chart tracking app volume across years of last update, differentiated by app pricing type.</li>
+						<li><strong>Category Rating Comparison:</strong> A structured bar chart comparing user rating distributions across app categories against marketplace baseline averages.</li>
+						<li><strong>Install Bracket Treemap:</strong> A compact treemap displaying app-count distribution across segmented install tiers ranging from under 10K to 100M+ installs.</li>
+						<li><strong>Rating vs. Installs Multi-Dimensional Analysis:</strong> A scatter plot correlating average ratings with total install volumes, using bubble size to represent review counts and color coding for install brackets and category details.</li>
+					</ul>
+				</section>
+
+				<!-- Section: Tableau Implementation Details -->
+				<section id="implementation" class="case-study-section">
+					<h2>Tableau Implementation Details</h2>
+					<p>The dashboard was architected using specialized Tableau worksheets organized into an interconnected reporting canvas. The table below outlines the worksheet configurations, visual shelf placements, and analytical roles:</p>
+
+					<div class="table-wrapper">
+						<table class="alt">
+							<thead>
+								<tr>
+									<th>Worksheet / Component</th>
+									<th>Tableau Setup &amp; Shelf Configuration</th>
+									<th>Analytical Purpose</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Total Installs KPI</strong></td>
+									<td><code>SUM(Installs)</code> formatted as a prominent text KPI card with Category, Type, Content Rating, and install-bracket context filters.</td>
+									<td>Presents aggregate install volume reflecting the active filter context.</td>
+								</tr>
+								<tr>
+									<td><strong>Rating vs Installs</strong></td>
+									<td>Columns: <code>AVG(Rating)</code>; Rows: <code>SUM(Installs)</code>; Color: <code>install bracket</code>; Size: <code>CNT(Reviews)</code>; Detail: <code>Category</code>.</td>
+									<td>Correlates rating quality with install volume, weighting markers by review scale and categorizing by bracket.</td>
+								</tr>
+								<tr>
+									<td><strong>App Trends / Year</strong></td>
+									<td>Columns: <code>YEAR(Last Updated)</code>; Color: <code>Type</code>; measure shelves tracking app volume over time.</td>
+									<td>Illustrates how application release and maintenance cadence developed across update years for free vs paid apps.</td>
+								</tr>
+								<tr>
+									<td><strong>Top 10 by Paid / Revenue</strong></td>
+									<td>Rows / Columns: Category and <code>SUM(Revenue Estimate)</code>; data labels displaying formatted revenue estimates.</td>
+									<td>Ranks top-performing categories by estimated monetized revenue to pinpoint lucrative segments.</td>
+								</tr>
+								<tr>
+									<td><strong>Install Bracket Distribution</strong></td>
+									<td>Treemap with <code>CNT(App)</code> on Size and Color; grouped and labeled by <code>install bracket</code>.</td>
+									<td>Visualizes catalogue concentration across segmented install ranges (e.g., Under 10K, 10K&ndash;100K, 1M&ndash;10M, 100M+).</td>
+								</tr>
+								<tr>
+									<td><strong>Category Rating Comparison</strong></td>
+									<td>Category dimension paired with rating measure marks and reference line baseline.</td>
+									<td>Compares user rating performance across categories against average benchmarks.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<h3>Calculated Fields &amp; Helper Dimensions</h3>
+					<p>To enable multi-tiered segmentation without distorting raw inputs, the workbook employs tailored Tableau calculated fields:</p>
+					<ul>
+						<li><code>free vs paid</code> &mdash; Segments application records into standardized pricing categories to power donut visualizations and split-series trends.</li>
+						<li><code>install bracket</code> &mdash; Groups raw download numbers into structured adoption tiers (e.g., Under 10K, 10K&ndash;100K, 100K&ndash;1M, 1M&ndash;10M, 10M&ndash;100M), enabling cleaner cohort analysis and treemap sizing.</li>
+						<li><code>Rating Band</code> &mdash; Partitions continuous rating values into analytical brackets for cohort evaluation and rating-distribution benchmarking.</li>
+						<li><code>Size Category</code> &mdash; Classifies application footprint to assess the relationship between package size, user adoption, and device constraints.</li>
+					</ul>
+				</section>
+
+				<!-- Section: Dashboard Workflow -->
+				<section id="workflow" class="case-study-section">
+					<h2>Dashboard Workflow</h2>
+					<pre class="case-study-workflow-diagram"><code>Google Play Store Raw Dataset
+        │
+        ▼
+Data Preparation &amp; Attribute Structuring
+(Category, Type, Installs, Rating, Reviews, Last Updated, Content Rating)
+        │
+        ▼
+Calculated Fields &amp; Segment Grouping
+(install bracket, free vs paid, Rating Band, Size Category)
+        │
+        ▼
+Worksheet Visualizations
+(KPI indicator cards, category bar rankings, donut split, time trends, treemap, scatter plot)
+        │
+        ▼
+Interactive Dashboard Construction
+(Layout containers, global interactive filters, visual hierarchy, consistent palette)
+        │
+        ▼
+Deployment &amp; Cloud Publishing
+(Validated in Tableau Desktop &amp; published to Tableau Public)</code></pre>
+				</section>
+
+				<!-- Section: Tableau Skills & Technology -->
+				<section id="technology" class="case-study-section">
+					<h2>Tableau Skills &amp; Technology</h2>
+					<div class="table-wrapper">
+						<table class="alt">
+							<thead>
+								<tr>
+									<th>Domain</th>
+									<th>Tableau Implementation &amp; Technical Capabilities</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Primary Platform</strong></td>
+									<td>Tableau Desktop &amp; Tableau Public</td>
+								</tr>
+								<tr>
+									<td><strong>Core Analytical Skills</strong></td>
+									<td>Interactive Exploratory Data Analysis (EDA), Visual Storytelling, KPI Dashboard Design</td>
+								</tr>
+								<tr>
+									<td><strong>Tableau Techniques</strong></td>
+									<td>Calculated Fields, Custom Grouping, Multi-Measure Dual Axes, Treemaps, Donut Charts, Scatter Plots</td>
+								</tr>
+								<tr>
+									<td><strong>Interactive Controls</strong></td>
+									<td>Global Context Filtering, Coordinated Marks Cards, Synchronized Tooltips, Parameterized Views</td>
+								</tr>
+								<tr>
+									<td><strong>Key Dimensions</strong></td>
+									<td>Category, App Type (Free / Paid), Content Rating, Install Bracket, Year Last Updated</td>
+								</tr>
+								<tr>
+									<td><strong>Key Measures</strong></td>
+									<td>SUM(Installs), CNT(App), AVG(Rating), CNT(Reviews), SUM(Revenue Estimate), % Share of Free Apps</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+
+				<!-- Section: Final Dashboard Preview -->
+				<section id="dashboard" class="case-study-section">
+					<h2>Dashboard Walkthrough</h2>
+					<p>Below is the complete Google Play Store Analytics Dashboard layout, bringing together headline KPIs, category rankings, pricing distribution, update trends, install brackets, and rating-versus-installs correlation into a single cohesive interface.</p>
+
+					<figure class="case-study-shot">
+						<img src="../../images/Tableu_Playstore_dataset/Screenshot 2026-09-18 153948.png"
+							alt="Google Play Store Analytics Tableau dashboard layout displaying KPI cards, Top 10 paid categories, Top 10 by app count, Free vs Paid donut chart, annual app update trends, category ratings, install bracket treemap, and rating versus installs scatter plot" />
+						<figcaption>
+							<strong>Google Play Store Analytics Dashboard &mdash; Full Tableau Workspace Overview</strong>
+							The unified interface connects interactive Category, Install Bracket, Type, and Content Rating filters on the left with headline KPI cards (Total Installs, Total Apps, Free App %, Avg Rating), category rankings, pricing splits, update trend curves, an install bracket treemap, and an exploratory rating-versus-installs scatter plot.
+						</figcaption>
+					</figure>
+				</section>
+
+				<!-- Section: Design Considerations -->
+				<section id="considerations" class="case-study-section">
+					<h2>Design Considerations</h2>
+
+					<h3>Consolidating Multi-Faceted Exploration in One Interface</h3>
+					<p>Mobile market datasets are frequently fragmented across disparate reports. The dashboard integrates global dropdown filters for Category, Install Bracket, Type, and Content Rating directly adjacent to visual views. This enables rapid scenario testing&mdash;such as examining high-performing free productivity apps versus paid games&mdash;without requiring navigation across multiple tabs.</p>
+
+					<h3>Balancing Volume, Quality, and Monetization Signals</h3>
+					<p>Relying solely on install counts produces a biased picture of app health. The dashboard juxtaposes absolute install volume with review counts, user rating averages, and pricing distributions. This ensures that high-volume utility applications with modest ratings can be analyzed in contrast with smaller, highly-rated niche tools.</p>
+
+					<h3>Visual Hierarchy &amp; Cohesive Palette</h3>
+					<p>To reduce cognitive load across eight simultaneous visual components, the design applies a restrained, professional slate-and-blue color palette. Key metrics are positioned at the top as immediate headline indicators, while deeper multi-variable relationships (such as the Rating vs. Installs scatter and Install Treemap) anchor the lower half of the view for secondary exploration.</p>
+				</section>
+
+			</article>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<section class="split contact" id="contact">
+				<section>
+					<h3>Phone</h3>
+					<p><a href="tel:+918121967118">+91 8121967118</a></p>
+				</section>
+				<section>
+					<h3>Email</h3>
+					<p><a href="mailto:gnaveenpaul123@gmail.com">gnaveenpaul123@gmail.com</a></p>
+				</section>
+				<section>
+					<h3>GitHub</h3>
+					<p><a href="https://github.com/gnaveenpaul123-cyber" target="_blank"
+							rel="noopener noreferrer">github.com/gnaveenpaul123-cyber</a></p>
+				</section>
+			</section>
+		</footer>
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul>
+				<li>&copy; Naveen Paul Reddy Gopavarapu</li>
+				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../../assets/js/browser.min.js"></script>
+	<script src="../../assets/js/breakpoints.min.js"></script>
+	<script src="../../assets/js/util.js"></script>
+	<script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
